@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221006 21:35:45.876" rpa="false" schemaversion="3">
+<suite id="s1" name="Day1" source="D:\Bootcamp dojobox\New folder\Day1.robot">
+<kw name="Open Browser With Google Chrome" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${DEMOBLAZE_URL}</arg>
+<arg>browser=${CHROME_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221006 21:35:46.075" level="INFO">Opening browser 'gc' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20221006 21:35:46.074" endtime="20221006 21:35:49.682"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="nava"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221006 21:35:49.724" level="INFO">Element 'xpath=//*[@id="nava"]' is displayed.</msg>
+<status status="PASS" starttime="20221006 21:35:49.682" endtime="20221006 21:35:49.724"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:46.074" endtime="20221006 21:35:49.724"/>
+</kw>
+<test id="s1-t1" name="User Should Be Able To Open Google Chrome Browser" line="34">
+<kw name="Verify Top Menu Button Appears">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Home')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221006 21:35:49.757" level="INFO">Element 'xpath=//*[contains(text(), 'Home')]' is displayed.</msg>
+<status status="PASS" starttime="20221006 21:35:49.726" endtime="20221006 21:35:49.757"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:49.726" endtime="20221006 21:35:49.757"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:49.724" endtime="20221006 21:35:49.758"/>
+</test>
+<test id="s1-t2" name="User Should Be Able To Login" line="38">
+<kw name="Click Login Button In Home Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="login2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221006 21:35:49.761" level="INFO">Clicking element 'xpath=//*[@id="login2"]'.</msg>
+<status status="PASS" starttime="20221006 21:35:49.761" endtime="20221006 21:35:49.838"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:49.760" endtime="20221006 21:35:49.838"/>
+</kw>
+<kw name="Input Username">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="loginusername"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221006 21:35:49.838" endtime="20221006 21:35:50.094"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="loginusername"]</arg>
+<arg>text=test9618</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221006 21:35:50.095" level="INFO">Typing text 'test9618' into text field 'xpath=//*[@id="loginusername"]'.</msg>
+<status status="PASS" starttime="20221006 21:35:50.094" endtime="20221006 21:35:50.203"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:49.838" endtime="20221006 21:35:50.203"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="loginpassword"]</arg>
+<arg>text=test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221006 21:35:50.204" level="INFO">Typing text 'test' into text field 'xpath=//*[@id="loginpassword"]'.</msg>
+<status status="PASS" starttime="20221006 21:35:50.204" endtime="20221006 21:35:50.281"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:50.203" endtime="20221006 21:35:50.281"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:49.759" endtime="20221006 21:35:50.282"/>
+</test>
+<kw name=" Close Google Chrome Browser" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221006 21:35:50.283" endtime="20221006 21:35:52.454"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:50.283" endtime="20221006 21:35:52.455"/>
+</kw>
+<status status="PASS" starttime="20221006 21:35:45.878" endtime="20221006 21:35:52.455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Day1">Day1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
